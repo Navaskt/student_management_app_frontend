@@ -1,5 +1,3 @@
-import 'package:student_management_app_frontend/features/students/domain/entities/student_entity.dart';
-
 import '../../../../core/network/api_client.dart';
 import '../models/student_model.dart';
 
@@ -7,9 +5,9 @@ class StudentRemoteDataSource {
   final ApiClient api;
   StudentRemoteDataSource(this.api);
 
-  Future<List<StudentEntity>> getStudents() => api.getStudents();
-  Future<StudentEntity> getStudent(int id) => api.getStudent(id);
-  Future<StudentEntity> addStudent(StudentEntity student) => api.addStudent(student);
-  Future<StudentEntity> updateStudent(int id, StudentEntity student) => api.updateStudent(id, student);
+  Future<List<StudentModel>> getStudents() => api.getStudents();
+  Future<StudentModel> getStudent(int id) => api.getStudent(id);
+  Future<StudentModel> addStudent(StudentModel student) => api.addStudent(student);
+  Future<StudentModel> updateStudent(int id, StudentModel student) => api.updateStudent(id, student);
   Future<void> deleteStudent(int id) => api.deleteStudent(id);
 }
