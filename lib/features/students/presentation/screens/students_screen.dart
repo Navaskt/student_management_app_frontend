@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../providers/student_provider.dart';
+import '../providers/student_controller.dart';
 
 class StudentsScreen extends ConsumerWidget {
   const StudentsScreen({super.key});
@@ -21,7 +21,7 @@ class StudentsScreen extends ConsumerWidget {
             child: ListTile(
               leading: CircleAvatar(child: Text(students[i].firstName[0])),
               title: Text('${students[i].firstName} ${students[i].lastName}'),
-              subtitle: Text(students[i].major),
+              subtitle: Text('GPA: ${students[i].gpa}'),
               trailing: Text(students[i].gpa.toString()),
               onTap: () {/* Go to detail page */},
             ),
@@ -37,4 +37,5 @@ class StudentsScreen extends ConsumerWidget {
       ),
     );
   }
+
 }

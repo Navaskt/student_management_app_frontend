@@ -6,4 +6,6 @@ import '../../domain/entities/student_entity.dart';
 
 final studentsProvider = FutureProvider<List<StudentEntity>>((ref) {
   return ref.watch(studentRepositoryProvider).getStudents();
+
 });
+  
