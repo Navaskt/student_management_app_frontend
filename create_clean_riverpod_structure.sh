@@ -38,17 +38,6 @@ for FEATURE_NAME in $FEATURES; do
   mkdir -p lib/features/$FEATURE_NAME/presentation/screens
   mkdir -p lib/features/$FEATURE_NAME/presentation/widgets
 
-  # Create .gitkeep files to ensure directories are tracked by Git
-  touch lib/features/$FEATURE_NAME/data/datasources/.gitkeep
-  touch lib/features/$FEATURE_NAME/data/models/.gitkeep
-  touch lib/features/$FEATURE_NAME/data/repositories/.gitkeep
-  touch lib/features/$FEATURE_NAME/domain/entities/.gitkeep
-  touch lib/features/$FEATURE_NAME/domain/repositories/.gitkeep
-  touch lib/features/$FEATURE_NAME/domain/usecases/.gitkeep
-  touch lib/features/$FEATURE_NAME/presentation/providers/.gitkeep
-  touch lib/features/$FEATURE_NAME/presentation/screens/.gitkeep
-  touch lib/features/$FEATURE_NAME/presentation/widgets/.gitkeep
-
   echo "Successfully created feature: $FEATURE_NAME"
 done
 
