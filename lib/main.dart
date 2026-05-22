@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:student_management_app_frontend/features/students/presentation/screens/students_screen.dart';
 
 void main() => runApp(const ProviderScope(child: MyApp()));
 
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Container()
+      home: StudentsScreen()
     );
   }
 }
